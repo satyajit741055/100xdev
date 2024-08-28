@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navbar {
+    display: flex;
+    padding-left: 165px;
+    padding-top: 15px;
+    position: fixed;
+    background-color: white;
+    padding-bottom: 14px;
+    box-shadow: 2px 1px 2px #eee;
+    box-sizing: border-box;
+    z-index: 1000;
+    width: 100%;
+    
+
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding-right: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding-left: 20px;
+}
+
+.navbar nav img {
+    width: 180px;
+    padding-right: 580px;
+}
+
+
+.navbar nav ul li a {
+
+    text-decoration: None;
+    color:#333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+
+.container
+{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-Img img
+{
+    margin-top: 30px;
+    width: 1100px;
+}
+
+.text-center
+{
+    text-align: center;
+    color: black;
+}
+
+h1
+{
+    font-size: 40px;
+    margin: 10px;
+
+}
+
+h5{
+    font-size:20px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.singup-btn
+{
+    border: none;
+    border-radius: 3px;
+    background-color: blue;
+    padding: 15px 32px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.singup-btn:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
