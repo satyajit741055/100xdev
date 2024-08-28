@@ -1,60 +1,95 @@
-// const fs = require("fs")
+// console.log("week1")
+
+function sum(a,b)
+{
+    return parseInt(a)+parseInt(b);
+    // parsINT is type casting 
+}
+
+let ans = sum("2",30)
+// console.log(ans)
 
 
-// // function print(err,data)
-// const print = (err,data) => {
-//     if(err)
-//     {
-//         console.log("file not found")
-//     }
-//     else
-//     {
-//         console.log(data)
-//     }
-// }
 
-
-// const content = fs.readFile("an.txt","utf-8",print);
-
-// // setTimeout(1000);
-
-// const conten = fs.readFile("b.txt","utf-8",print);
-
-// console.log("content")
-
-class Rectangle {
-    constructor(width,height,color='blue')
+function sum_to_n(n)
+{
+    let sum = 0
+    for(let i =1;i<=n;i++)
     {
-        a.width = width;
-        a.height= height;
-        a.color = color;
+        sum = sum+i;
     }
 
-    area()
-    {
-        const area = a.width * a.height;
-        console.log(a)
-        return area;
-    }
+    return sum
+}
 
-    paint()
-    {
-        console.log(`Painting with color ${a.color}`);
-    }
+// console.log(sum_to_n(5))
+
+
+
+// Io-Heavy Operations 
+
+const fs = require("fs")
+// const contents = fs.readFile("F:\\Development\\100XDev\\Week2_Async_JS\\a.txt","utf-8");  // Reading file asyncronously
+// console.log(contents)
+
+
+const contents_b = fs.readFileSync("F:\\Development\\100XDev\\Week2_Async_JS\\b.txt","utf-8"); // Reading file syncronously
+// console.log(contents_b) 
+
+
+function read(path)
+{
+    const contents_b = fs.readFileSync(path,"utf-8");
+    console.log(contents_b)
+}
+
+// read("F:\\Development\\100XDev\\Week2_Async_JS\\b.txt")
+
+
+
+
+/////////////////////////////// Functional Arguments : Passing a function to another function as an arguments ///////////////////
+
+function sum(a,b)
+{
+    return a+b;
+}
+
+function multiply(a,b)
+{
+    return a*b;
+}
+
+function doOperation(a,b,op)
+{
+    return op(a,b)
 }
 
 
-// const rect = new Rectangle(2,4);
-// const area = rect.area();
-
-// console.log(area);
-// console.log(rect.paint());
-// console.log(rect)
+// console.log(doOperation(2,3,sum));
+// console.log("Multiplication",doOperation(2,3,multiply));
 
 
-const l = () =>{
-    console.log("HAre Krishna");
+
+
+///////  Asynchronous opeartion 
+
+
+function a(err,data)
+{
+    if(err)
+    {
+        console.log("Found Error ")
+    }
+    else{
+
+        console.log(data);
+    }
 }
 
+fs.readFile("F:\\Development\\100XDev\\Week2_Async_JS\\a.txt","utf-8",a);
 
-setTimeout(l,1000);
+fs.readFile("F:\\Development\\100XDev\\Week2_Async_JS\\b.txt","utf-8",a);
+
+console.log("Hare KRishna")
+
