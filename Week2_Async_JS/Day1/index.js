@@ -22,6 +22,7 @@ function sum_to_n(n)
     return sum
 }
 
+const { time } = require("console");
 // console.log(sum_to_n(5))
 
 
@@ -87,9 +88,33 @@ function a(err,data)
     }
 }
 
-fs.readFile("F:\\Development\\100XDev\\Week2_Async_JS\\a.txt","utf-8",a);
+// fs.readFile("F:\\Development\\100XDev\\Week2_Async_JS\\a.txt","utf-8",a);
 
-fs.readFile("F:\\Development\\100XDev\\Week2_Async_JS\\b.txt","utf-8",a);
+// fs.readFile("F:\\Development\\100XDev\\Week2_Async_JS\\b.txt","utf-8",a);
 
-console.log("Hare KRishna")
+// console.log("Hare KRishna")
 
+
+
+
+console.log("Hi")
+
+function timeout(){
+    console.log("CLik the button");
+}
+
+setTimeout(timeout,50)
+
+console.log("Welcome to Templ")
+
+
+let sum_2 = 0
+for(let i=0;i<100000;i++)
+{
+    sum_2=sum_2+i;
+}
+
+
+
+
+console.log("Operaion done")
