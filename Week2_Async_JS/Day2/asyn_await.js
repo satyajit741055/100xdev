@@ -6,7 +6,7 @@ function readFilePromisified(fileName)
         fs.readFile(fileName,"utf-8",(err,data)=>{
             if (err)
             {
-                reject(console.log("Some Error while Handling"))
+                reject("Some Error while Handling")
             }
             else
             {
@@ -21,9 +21,14 @@ function readFilePromisified(fileName)
 
 
 async function readData(){
-    const content = await readFilePromisified("F:\\Development\\100XDev\\Week2_Async_JS\\Day1\\a.txdt")
-    console.log(content)
-
+    try {
+        const content = await readFilePromisified("F:\\Development\\100XDev\\Week2_Async_JS\\Day1\\a.txdt")
+        console.log(content)
+    }
+    catch(err)
+    {
+        console.error(err)
+    }
 }
 
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Add Something"></input>
+    <button onclick="addTodo()" >Add Todo</button>
+</body>
+<script>
+    let ctr = 1 ;
+    function addTodo()
+    {
+        const addValue = document.querySelector("input").value;
+        const newDivEl = document.createElement("div");
+        newDivEl.setAttribute("id",ctr);
+        newDivEl.innerHTML = "<div>"+addValue+"</div><button onclick='deleteTodo(" + ctr + ")'>Delete</button>";
+        document.querySelector("body").appendChild(newDivEl)
+        ctr = ctr+1;
+    }
+
+    function deleteTodo(ctr)
+    {
+        const delEle = document.getElementById(ctr);
+        document.querySelector("body").removeChild(delEle);
+    }
+</script>
+</html>
